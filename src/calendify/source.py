@@ -93,13 +93,15 @@ class Skola24Source(Source):
         for lesson_style in box_list:
             if lesson_style["lessonGuids"] != None:
                 for id in lesson_style["lessonGuids"]:
-                    lesson_colors[id] = get_calendar_color(lesson_style["bColor"])
+                    lesson_colors[id] = get_calendar_color(
+                        lesson_style["bColor"])
         return lesson_colors
 
     def _parse_lesson(
         self, data: dict[str, Any], year: int, week: int, color: int | None = None
     ) -> Event:
-        date = datetime.date.fromisocalendar(year, week, data["dayOfWeekNumber"])
+        date = datetime.date.fromisocalendar(
+            year, week, data["dayOfWeekNumber"])
         return Event(
             data["guidId"],
             data["texts"][0],
@@ -158,6 +160,7 @@ class TimeEditSource(Source):
                 parse_time(data["starttime"], self.timezone),
             ),
             merge_date_and_time(
-                parse_date(data["enddate"]), parse_time(data["endtime"], self.timezone)
+                parse_date(data["enddate"]), parse_time(
+                    data["endtime"], self.timezone)
             ),
         )

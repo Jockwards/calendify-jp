@@ -1,0 +1,12 @@
+[tools]
+python = "3.13"
+uv = "latest"
+
+[tasks.install]
+run = "uv sync"
+description = "Install dependencies using uv"
+
+[tasks.run]
+run = "uv run calendify"
+description = "Run the Calendify sync script"
+depends = ["install"]
