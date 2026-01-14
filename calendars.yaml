@@ -1,48 +1,174 @@
 # The number of upcoming weeks to sync, including the current
-weeks_to_sync: 8
+weeks_to_sync: 12
 
 # The calendars to sync
 calendars:
-  - Chalmers:
-    source:
-      # Supported sources: timeedit, skola24
-      type: timeedit
-      # The domain used by the university
-      domain: chalmers
-      # The id of the desired course
-      id: 977.8
-      # The desired language
-      language: sv_SE
-      # The timezone that received events are in, either as a lookup key in the [IANA time zone database](https://www.iana.org/time-zones), or an integer specifying the deviation from UTC in hours.
-      timezone: CET
+#   - Chalmers:
+#     source:
+#       # Supported sources: timeedit, skola24
+#       type: timeedit
+#       # The domain used by the university
+#       domain: chalmers
+#       # The id of the desired course
+#       id: 977.8
+#       # The desired language
+#       language: sv_SE
+#       # The timezone that received events are in, either as a lookup key in the [IANA time zone database](https://www.iana.org/time-zones), or an integer specifying the deviation from UTC in hours.
+#       timezone: CET
     
-    target:
-      # Supported targets: gcalendar
-      type: gcalendar
-      # The name of the created calendar
-      name: TKTEM-2
-      # The desired timezone of the created calendar
-      timezone: CET
-      # Who has read access to the calendar
-      access:
-        - benjamin.agardh@gmail.com: writer # Allows write access to a specific user
-        - public: reader # Allows read access to anyone with the link
+#     target:
+#       # Supported targets: gcalendar
+#       type: gcalendar
+#       # The name of the created calendar
+#       name: TKTEM-2
+#       # The desired timezone of the created calendar
+#       timezone: CET
+#       # Who has read access to the calendar
+#       access:
+#         - benjamin.agardh@gmail.com: writer # Allows write access to a specific user
+#         - public: reader # Allows read access to anyone with the link
 
 
-  - LEL:
-    source:
-      type: skola24
-      # The domain used by the school
-      domain: lel.skola24.se
-      # The name of the school under the selected [domain]
-      school: Lars-Erik Larsson-gymnasiet
-      # The id of a student or class
-      id: siag
-      timezeone: CET
-    
-    target:
-      type: gcalendar
-      name: Signe Agardh
-      timezone: 3
-      access:
-        - signe@example.com: reader # Allows read access to a specific user
+    - KL6A:
+      source:
+        type: skola24
+        # The domain used by the school
+        domain: svedala.skola24.se
+        # The name of the school under the selected [domain]
+        school: Klågerupskolan
+        # The id of a student or class
+        id: 6A
+        timezone: CET
+
+      target:
+        type: gcalendar
+        name: KL 6A
+        timezone: CET
+        access:
+          - public: reader
+
+    - KL6B:
+      source:
+        type: skola24
+        # The domain used by the school
+        domain: svedala.skola24.se
+        # The name of the school under the selected [domain]
+        school: Klågerupskolan
+        # The id of a student or class
+        id: 6B
+        timezone: CET
+
+      target:
+        type: gcalendar
+        name: KL 6B
+        timezone: CET
+        access:
+          - public: reader
+
+    - KL7A:
+      source:
+        type: skola24
+        # The domain used by the school
+        domain: svedala.skola24.se
+        # The name of the school under the selected [domain]
+        school: Klågerupskolan
+        # The id of a student or class
+        id: 7A
+        timezone: CET
+
+      target:
+        type: gcalendar
+        name: KL 7A
+        timezone: CET
+        access:
+          - public: reader
+
+    - KL7B:
+      source:
+        type: skola24
+        # The domain used by the school
+        domain: svedala.skola24.se
+        # The name of the school under the selected [domain]
+        school: Klågerupskolan
+        # The id of a student or class
+        id: 7B
+        timezone: CET
+
+      target:
+        type: gcalendar
+        name: KL 7B
+        timezone: CET
+        access:
+          - public: reader
+
+    - KL8A:
+      source:
+        type: skola24
+        # The domain used by the school
+        domain: svedala.skola24.se
+        # The name of the school under the selected [domain]
+        school: Klågerupskolan
+        # The id of a student or class
+        id: 8A
+        timezone: CET
+
+      target:
+        type: gcalendar
+        name: KL 8A
+        timezone: CET
+        access:
+          - public: reader
+
+    - KL8B:
+      source:
+        type: skola24
+        # The domain used by the school
+        domain: svedala.skola24.se
+        # The name of the school under the selected [domain]
+        school: Klågerupskolan
+        # The id of a student or class
+        id: 8B
+        timezone: CET
+
+      target:
+        type: gcalendar
+        name: KL 8B
+        timezone: CET
+        access:
+          - public: reader
+
+    - KL9A:
+      source:
+        type: skola24
+        # The domain used by the school
+        domain: svedala.skola24.se
+        # The name of the school under the selected [domain]
+        school: Klågerupskolan
+        # The id of a student or class
+        id: 9A
+        timezone: CET
+
+      target:
+        type: gcalendar
+        name: KL 9A
+        timezone: CET
+        access:
+          - public: reader
+
+    - KL9B:
+      source:
+        type: skola24
+        # The domain used by the school
+        domain: svedala.skola24.se
+        # The name of the school under the selected [domain]
+        school: Klågerupskolan
+        # The id of a student or class
+        id: 9B
+        timezone: CET
+
+      target:
+        type: gcalendar
+        name: KL 9B
+        timezone: CET
+        access:
+          - public: reader
